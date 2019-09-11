@@ -18,10 +18,10 @@
     <ClCompile Include="banco.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="funcionario.cpp">
+    <ClCompile Include="Conta.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Conta.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -29,7 +29,7 @@
     <ClInclude Include="conta.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="funcionario.h">
+    <ClInclude Include="banco.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

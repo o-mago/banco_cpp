@@ -2,33 +2,41 @@
 using std::cout;
 using std::cin;
 
-		char usuario[20];
-		float saldo = 0;
-		char senha[20];
-
-		Conta::Conta() {
-		}
-
-		Conta::Conta(const char* usuario, const char* senha) {
-			strcpy_s(Conta::usuario, usuario);
-			strcpy_s(Conta::senha, senha);
-			cout << "Conta::Conta: " << Conta::usuario;
-			cout << "Conta::Conta: " << Conta::senha;
-			saldo = 0;
-		}
+Conta::Conta(int numero, string titular, double saldo, int senha) {
+	this->numero = numero;
+	this->titular = titular;
+	this->saldo = saldo;
+	this->senha = senha;
+}
 		
-		float Conta::get_saldo() {
-			return saldo;
-		}
+double Conta::get_saldo() {
+	return saldo;
+}
 
-		float Conta::deposito(float valor) {
-			return saldo += valor;
-		}
+void Conta::set_saldo() {
+	this->saldo = saldo;
+}
 
-		float Conta::saque(float valor) {
-			return saldo -= valor;
-		}
+int Conta::get_numero() {
+	return this->numero;
+}
 
-		char* Conta::get_usuario() {
-			return usuario;
-		}
+string Conta::getTitular() {
+	return this->titular;
+}
+
+float Conta::deposito(double valor) {
+	return saldo += valor;
+}
+
+float Conta::saque(double valor) {
+	return saldo -= valor;
+}
+
+bool Conta::habilitaAcesso(int senha) {
+	return this->senha == senha;
+}
+void Conta::transferencia(Conta* recebedor, double valor) {
+	this->saldo -= valor;
+	recebedor->saldo += valor;
+}

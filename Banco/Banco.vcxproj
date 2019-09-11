@@ -125,11 +125,11 @@
   <ItemGroup>
     <ClCompile Include="banco.cpp" />
     <ClCompile Include="Conta.cpp" />
-    <ClCompile Include="funcionario.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="banco.h" />
     <ClInclude Include="conta.h" />
-    <ClInclude Include="funcionario.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
